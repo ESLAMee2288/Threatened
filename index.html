@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنبيه أمني</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            animation: shake 0.5s ease-in-out infinite alternate;
+        }
+        @keyframes shake {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(5px);
+            }
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .data {
+            background-color: #fafafa;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: left;
+            border: 1px solid #e1e1e1;
+        }
+        .data h2 {
+            color: #d9534f;
+            margin-top: 0;
+        }
+        .data ul {
+            list-style: none;
+            padding: 0;
+        }
+        .data li {
+            margin: 10px 0;
+        }
+        .file-details {
+            background-color: #fff;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #e1e1e1;
+        }
+        .file-details p {
+            margin: 0;
+            color: #333;
+        }
+        .warning {
+            color: #d9534f;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .hacker {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .button {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تنبيه أمني</h1>
+        <p>لقد تم جمع جميع بيانات هاتفك، بما في ذلك الصور، الفيديوهات، والملفات الشخصية الأخرى. يرجى تأكيد هويتك لاستعادة السيطرة على حسابك ومنع أي استخدام غير قانوني لبياناتك.</p>
+        <div class="data">
+            <h2>الملفات التي تم جمعها:</h2>
+            <ul>
+                <li>الصور: <span id="photo-count">1200 ملف</span></li>
+                <div class="file-details" id="photo-details">
+                    <p>IMG_20230101.jpg</p>
+                    <p>IMG_20230102.jpg</p>
+                    <p>IMG_20230103.jpg</p>
+                </div>
+                <li>الفيديوهات: <span id="video-count">200 ملف</span></li>
+                <div class="file-details" id="video-details">
+                    <p>VID_20230101.mp4</p>
+                    <p>VID_20230102.mp4</p>
+                    <p>VID_20230103.mp4</p>
+                </div>
+                <li>المستندات: <span id="document-count">350 ملف</span></li>
+                <div class="file-details" id="document-details">
+                    <p>Document1.pdf</p>
+                    <p>Document2.pdf</p>
+                    <p>Document3.pdf</p>
+                </div>
+                <li>الرسائل النصية: <span id="message-count">800 رسالة</span></li>
+                <div class="file-details" id="message-details">
+                    <p>"مرحبًا، كيف حالك؟" - 2024-07-01</p>
+                    <p>"سأكون في الموعد المحدد." - 2024-07-02</p>
+                    <p>"هل تحتاج إلى أي مساعدة؟" - 2024-07-03</p>
+                </div>
+                <li>جهات الاتصال: <span id="contact-count">150 جهة</span></li>
+                <div class="file-details" id="contact-details">
+                    <p>محمد - 0123456789</p>
+                    <p>أحمد - 0987654321</p>
+                    <p>علي - 0112233445</p>
+                </div>
+            </ul>
+        </div>
+        <p class="warning">إذا لم تقم بتأكيد هويتك خلال 24 ساعة، سيتم نشر جميع بياناتك الشخصية على الإنترنت.</p>
+        <p class="hacker">تحذير: هذه العملية تمت بواسطة الهاكر المعروف باسم "Eslam".</p>
+        <a href="html2.html" class="button">تأكيد الهوية</a>
+    </div>
+</body>
+</html>
