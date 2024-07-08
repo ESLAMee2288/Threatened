@@ -1,0 +1,77 @@
+ 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأثير الاهتزاز</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            animation: shake 0.5s ease-in-out infinite alternate;
+        }
+        @keyframes shake {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(5px);
+            }
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .warning {
+            color: #d9534f;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #d9534f;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>تأثير الاهتزاز</h1>
+        <p>تم جمع جميع بيانات هاتفك. يرجى تأكيد هويتك لمنع نشرها على الإنترنت.</p>
+        <p class="warning">إذا لم تقم بتأكيد هويتك خلال 24 ساعة، سيتم نشر جميع بياناتك الشخصية.</p>
+        <button class="button" onclick="triggerVibration()">تأكيد الهوية</button>
+    </div>
+
+    <script>
+        function triggerVibration() {
+            // Check if the vibration API is supported
+            if ("vibrate" in navigator) {
+                // Vibrate for 500ms
+                navigator.vibrate(500);
+            }
+        }
+    </script>
+</body>
+</html>
